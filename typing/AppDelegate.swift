@@ -12,10 +12,40 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var volume: Float = 0.5
 
+    func grabStoryboard() -> UIStoryboard {
+        var storyboard = UIStoryboard()
+        let height = UIScreen.main.bounds.size.height
+        let width = UIScreen.main.bounds.size.width
 
+        
+        if height == 736 {
+            storyboard = UIStoryboard(name: "Main_6plus", bundle: nil)
+            print("6plusの画面が表示されます")
+        } else if height == 480 {
+            storyboard = UIStoryboard(name: "Main_4s", bundle: nil)
+            print("4sの画面が表示されます")
+        }else if width == 320{
+            storyboard = UIStoryboard(name: "Main_5s", bundle: nil)
+            print("5sの画面が表示されます")
+        }else{
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            print("通常の画面が表示されます")
+
+        }
+        return storyboard
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let storyboard: UIStoryboard = self.grabStoryboard()
+        if let window = window {
+            window.rootViewController = storyboard.instantiateInitialViewController()
+        }
+        
+        self.window?.makeKeyAndVisible()
         return true
     }
 
