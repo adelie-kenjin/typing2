@@ -42,7 +42,7 @@ class AttackViewController: UIViewController {
         if userDefaults.object(forKey: "IMAGE") != nil {
             image.image = UIImage(data: userDefaults.object(forKey: "IMAGE") as! Data)
         }else {
-            image.image = UIImage(named:"8fc31f.png")
+            image.image = UIImage(named:"naidesu.png")
         }
         
 
@@ -68,7 +68,7 @@ class AttackViewController: UIViewController {
         if userDefaults.object(forKey: "IMAGE") != nil {
             image.image = UIImage(data: userDefaults.object(forKey: "IMAGE") as! Data)
         }else {
-            image.image = UIImage(named:"8fc31f.png")
+            image.image = UIImage(named:"naidesu.png")
         }
     }
     

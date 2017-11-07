@@ -11,6 +11,7 @@
 		841021821F25D77B00A7F2BB /* attack.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841021811F25D77A00A7F2BB /* attack.mp3 */; };
 		841021841F25D7C500A7F2BB /* Chippy_2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841021831F25D7C500A7F2BB /* Chippy_2.mp3 */; };
 		841021861F25D83600A7F2BB /* 691.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 841021851F25D83600A7F2BB /* 691.mp3 */; };
+		841E6CEA1FA8893F002FE37E /* naidesu.png in Resources */ = {isa = PBXBuildFile; fileRef = 841E6CE91FA8893F002FE37E /* naidesu.png */; };
 		8422AB3D1F191292003E9A53 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8422AB3C1F191292003E9A53 /* CounterViewController.swift */; };
 		84269ECC1F0BAF4E00B6A7AF /* CharaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84269ECB1F0BAF4E00B6A7AF /* CharaData.swift */; };
 		842A923D1F14E325003FD909 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A923C1F14E325003FD909 /* CharacterViewController.swift */; };
@@ -98,6 +99,7 @@
 		841021811F25D77A00A7F2BB /* attack.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = attack.mp3; sourceTree = "<group>"; };
 		841021831F25D7C500A7F2BB /* Chippy_2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chippy_2.mp3; sourceTree = "<group>"; };
 		841021851F25D83600A7F2BB /* 691.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 691.mp3; sourceTree = "<group>"; };
+		841E6CE91FA8893F002FE37E /* naidesu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = naidesu.png; sourceTree = "<group>"; };
 		8422AB3C1F191292003E9A53 /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CounterViewController.swift; path = ../CounterViewController.swift; sourceTree = "<group>"; };
 		84269ECB1F0BAF4E00B6A7AF /* CharaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharaData.swift; sourceTree = "<group>"; };
 		842A923C1F14E325003FD909 /* CharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		847CCD641EF92FF8003B8A4A /* images */ = {
 			isa = PBXGroup;
 			children = (
+				841E6CE91FA8893F002FE37E /* naidesu.png */,
 				848B00AA1F3701B8008910D7 /* 森.png */,
 				84A6DF7A1F557A7B0090D94D /* カピバラ.png */,
 				84A6DF7B1F557A7B0090D94D /* キリン.png */,
@@ -461,6 +464,7 @@
 				847E158A1F2712880078DF0B /* troublesome.mp3 in Resources */,
 				847CCD6E1EF93025003B8A4A /* 犬鷲.png in Resources */,
 				844F63231F026FFB00824C12 /* コインが足りません.png in Resources */,
+				841E6CEA1FA8893F002FE37E /* naidesu.png in Resources */,
 				84C06C611EF93FF500FB1567 /* icons8-Sword-50.png in Resources */,
 				84C06C561EF93AD900FB1567 /* icons8-Shopping Cart-75.png in Resources */,
 				848B00AB1F3701B8008910D7 /* 森.png in Resources */,

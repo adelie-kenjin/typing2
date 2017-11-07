@@ -9,13 +9,13 @@
 import UIKit
 
 class CharacterViewController: UIViewController ,UIScrollViewDelegate {
-
+    
     var scrollView:UIScrollView!
     var pageControll:UIPageControl!
     var image:UIImage!
     
     var userDefaults:UserDefaults = UserDefaults.standard
-
+    
     var getArray:[Bool] = [false,false,false,false,false,false,false]
     var charaData:CharaData = CharaData()
     var charaArray:[String] = []
@@ -29,29 +29,30 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       /* if userDefaults.array(forKey: "CHARA") != nil {
+        if userDefaults.array(forKey: "CHARA") != nil {
             
-        print(userDefaults.array(forKey: "CHARA"))
+            print(userDefaults.array(forKey: "CHARA"))
             
             charaArray = userDefaults.array(forKey: "CHARA") as! [String]
         }
         if userDefaults.array(forKey: "POWER") != nil {
             charaPower = userDefaults.array(forKey: "POWER") as! [Int]
-        }*/
+        }
+        
         if userDefaults.array(forKey: "GET") != nil {
             getArray = userDefaults.array(forKey: "GET") as! [Bool]
         }
         
-   /*     if userDefaults.object(forKey: "NUM") != nil {
-            b = userDefaults.object(forKey: "NUM") as! Int
-        }
-        */
+        /*     if userDefaults.object(forKey: "NUM") != nil {
+         b = userDefaults.object(forKey: "NUM") as! Int
+         }
+         */
         print(getArray)
         
         
         getChara()
         
-       
+        
         self.scrollView = UIScrollView(frame: self.view.bounds)
         self.scrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(charaArray.count), height: self.view.bounds.height*2/3)
         self.scrollView.isPagingEnabled = true
@@ -73,11 +74,18 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
             name.text = charaArray[p-1]
             point.text = String(charaPower[p-1])
         }
-        name.text = charaArray[0]
+        if charaArray.count != 0{
+            name.text = charaArray[0]
+            image = UIImage(named: charaArray[0]+".png")
+        }else{
+        name.text = "ありません"
+        image = UIImage(named: "naidesu.png")
+
+        }
         
-        image = UIImage(named: charaArray[0]+".png")
-        
-        point.text = String(charaPower[0])
+        if charaPower.count != 0{
+            point.text = String(charaPower[0])
+        }
         
         pageControll.currentPage = 0
         
@@ -95,23 +103,23 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
         
         
     }
-
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         var pageProgress = Double(scrollView.contentOffset.x / scrollView.bounds.width)
         print(pageProgress)
         b = Int(pageProgress)
         pageControll.currentPage = Int(pageProgress)
-
+        
         name.text = charaArray[Int(pageProgress)]
         point.text = String(charaPower[Int(pageProgress)])
         
         print(charaArray[b])
         
-       // userDefaults.set(b, forKey: "NUM")
+        // userDefaults.set(b, forKey: "NUM")
         
-     //  let page = Int(round(pageProgress))
-     //  self.pageControll.currentPage = page
-       // self.pageControll.currentPage = Int(round(pageProgress))
+        //  let page = Int(round(pageProgress))
+        //  self.pageControll.currentPage = page
+        // self.pageControll.currentPage = Int(round(pageProgress))
         
     }
     override func didReceiveMemoryWarning() {
@@ -121,14 +129,23 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
     
     @IBAction func a(){
         print(image)
-        let data = UIImagePNGRepresentation(UIImage(named: charaArray[b]+".png")!)
-        userDefaults.set(data, forKey: "IMAGE")
-        userDefaults.set(charaArray[b], forKey: "NAME")
-        userDefaults.set(b, forKey: "NUM")
-        print(charaArray[b])
-        print("キャラクター変更しました")
+        if charaArray.count != 0{
+            let data = UIImagePNGRepresentation(UIImage(named: charaArray[b]+".png")!)
+            userDefaults.set(data, forKey: "IMAGE")
+            userDefaults.set(charaArray[b], forKey: "NAME")
+            userDefaults.set(b, forKey: "NUM")
+            print(charaArray[b])
+            print("キャラクター変更しました")
+        }else{
+            let alert = UIAlertController(title: "変更できません",
+                                          message: "キャラクターを持っていません",
+                                          preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title :"OK",style :UIAlertActionStyle.cancel))
+            present(alert, animated: true,completion: nil)
+
+        }
     }
- 
+    
     func getChara() {
         charaArray.removeAll()
         charaPower.removeAll()
@@ -146,13 +163,13 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

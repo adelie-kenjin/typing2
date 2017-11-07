@@ -26,7 +26,7 @@ class ButtleViewController: UIViewController {
         if userDefaults.object(forKey: "IMAGE") != nil {
             image.image = UIImage(data: userDefaults.object(forKey: "IMAGE") as! Data)
         }else {
-            
+            image.image = UIImage(named:"naidesu.png")
         }
         // Do any additional setup after loading the view.
     }
@@ -55,12 +55,18 @@ class ButtleViewController: UIViewController {
     }
     @IBAction func button1(){
         self.performSegue(withIdentifier: "count", sender: nil)
+        tapButton.layer.cornerRadius = 20.0 //どれくらい丸くするのか
+        tapButton.layer.masksToBounds = true //viewに丸くする許可を出す
     }
     @IBAction func button2(){
         self.performSegue(withIdentifier: "count", sender: nil)
+        tapButton.layer.cornerRadius = 20.0 //どれくらい丸くするのか
+        tapButton.layer.masksToBounds = true //viewに丸くする許可を出す
     }
     @IBAction func button3(){
         self.performSegue(withIdentifier: "count", sender: nil)
+        tapButton.layer.cornerRadius = 20.0 //どれくらい丸くするのか
+        tapButton.layer.masksToBounds = true //viewに丸くする許可を出す
     }
     /*
     // MARK: - Navigation
