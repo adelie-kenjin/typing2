@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var storyboard = UIStoryboard()
         let height = UIScreen.main.bounds.size.height
         let width = UIScreen.main.bounds.size.width
+        
+        print("縦の長さは", height)
+        print("横の長さは", width)
 
         
         if height == 736 {
@@ -30,6 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else if width == 320{
             storyboard = UIStoryboard(name: "Main_5s", bundle: nil)
             print("5sの画面が表示されます")
+        }else if height == 812 {
+            storyboard = UIStoryboard(name: "Main_X", bundle: nil)
+            print("Xの画面が表示されます")
+        }else if width == 768{
+            storyboard = UIStoryboard(name: "Main_iPadmini", bundle: nil)
+            print("iPad Pro 9.7の画面が表示されます")
         }else{
             storyboard = UIStoryboard(name: "Main", bundle: nil)
             print("通常の画面が表示されます")

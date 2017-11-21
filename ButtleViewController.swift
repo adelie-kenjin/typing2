@@ -55,18 +55,15 @@ class ButtleViewController: UIViewController {
     }
     @IBAction func button1(){
         self.performSegue(withIdentifier: "count", sender: nil)
-        tapButton.layer.cornerRadius = 20.0 //どれくらい丸くするのか
-        tapButton.layer.masksToBounds = true //viewに丸くする許可を出す
+       
     }
     @IBAction func button2(){
         self.performSegue(withIdentifier: "count", sender: nil)
-        tapButton.layer.cornerRadius = 20.0 //どれくらい丸くするのか
-        tapButton.layer.masksToBounds = true //viewに丸くする許可を出す
+
     }
     @IBAction func button3(){
         self.performSegue(withIdentifier: "count", sender: nil)
-        tapButton.layer.cornerRadius = 20.0 //どれくらい丸くするのか
-        tapButton.layer.masksToBounds = true //viewに丸くする許可を出す
+
     }
     /*
     // MARK: - Navigation
