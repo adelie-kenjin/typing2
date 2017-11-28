@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -72,34 +73,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.64999997615814209" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_2519.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="fef-bJ-26d">
-                                <rect key="frame" x="0.0" y="-2" width="320" height="572"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.64999997615814209" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="IMG_2519.PNG" translatesAutoresizingMaskIntoConstraints="NO" id="fef-bJ-26d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iug-G6-LRT">
-                                <rect key="frame" x="62" y="315" width="196" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="23"/>
-                                <state key="normal" title="ガチャを引く"/>
-                                <connections>
-                                    <action selector="button" destination="juQ-Tf-rJL" eventType="touchUpInside" id="PRX-P0-8gh"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コインが足りません.png" translatesAutoresizingMaskIntoConstraints="NO" id="NDH-Vv-nb4">
-                                <rect key="frame" x="69" y="236" width="51" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-Jf-MWi">
-                                <rect key="frame" x="136" y="238" width="119" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Yw3-gt-0j8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DsY-Rk-MSH" userLabel="View1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSh-DU-FjV" userLabel="Stack View1">
+                                        <rect key="frame" x="0.0" y="216" width="320" height="48"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y3Z-m6-Mox" userLabel="View3">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="48"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="コインが足りません.png" translatesAutoresizingMaskIntoConstraints="NO" id="NDH-Vv-nb4">
+                                                <rect key="frame" x="80" y="0.0" width="57.5" height="48"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntR-8Z-Fhb" userLabel="View5">
+                                                <rect key="frame" x="137.5" y="0.0" width="6.5" height="48"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rh-Jf-MWi">
+                                                <rect key="frame" x="144" y="0.0" width="96" height="48"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="40"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z7b-IE-Wnd" userLabel="View4">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="48"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Z7b-IE-Wnd" firstAttribute="width" secondItem="XSh-DU-FjV" secondAttribute="width" multiplier="0.25" id="Cn3-wp-wMm"/>
+                                            <constraint firstItem="ntR-8Z-Fhb" firstAttribute="leading" secondItem="NDH-Vv-nb4" secondAttribute="trailing" id="Eha-72-LF2"/>
+                                            <constraint firstItem="y3Z-m6-Mox" firstAttribute="width" secondItem="XSh-DU-FjV" secondAttribute="width" multiplier="0.25" id="a3q-7h-2ec"/>
+                                            <constraint firstItem="7Rh-Jf-MWi" firstAttribute="width" secondItem="XSh-DU-FjV" secondAttribute="width" multiplier="0.3" id="dhY-Hb-klH"/>
+                                            <constraint firstItem="NDH-Vv-nb4" firstAttribute="width" secondItem="XSh-DU-FjV" secondAttribute="width" multiplier="0.18" id="j5b-Cn-QGj"/>
+                                            <constraint firstItem="ntR-8Z-Fhb" firstAttribute="width" secondItem="XSh-DU-FjV" secondAttribute="width" id="tl9-Nr-i3T"/>
+                                            <constraint firstItem="7Rh-Jf-MWi" firstAttribute="leading" secondItem="ntR-8Z-Fhb" secondAttribute="trailing" id="xYP-xy-eRe"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kx4-TF-VuJ">
+                                        <rect key="frame" x="0.0" y="264" width="320" height="48"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iug-G6-LRT">
+                                        <rect key="frame" x="0.0" y="312" width="320" height="72"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="23"/>
+                                        <state key="normal" title="ガチャを引く"/>
+                                        <connections>
+                                            <action selector="button" destination="juQ-Tf-rJL" eventType="touchUpInside" id="PRX-P0-8gh"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKH-EC-E9m" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="384" width="320" height="96"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="iug-G6-LRT" firstAttribute="height" secondItem="Yw3-gt-0j8" secondAttribute="height" multiplier="0.15" id="Bbj-1H-DCS"/>
+                                    <constraint firstItem="wKH-EC-E9m" firstAttribute="height" secondItem="Yw3-gt-0j8" secondAttribute="height" multiplier="0.2" id="HDW-wa-eLo"/>
+                                    <constraint firstItem="DsY-Rk-MSH" firstAttribute="height" secondItem="Yw3-gt-0j8" secondAttribute="height" id="LO2-HM-GZI"/>
+                                    <constraint firstItem="XSh-DU-FjV" firstAttribute="height" secondItem="Yw3-gt-0j8" secondAttribute="height" multiplier="0.1" id="O9N-pu-MV1"/>
+                                    <constraint firstItem="Kx4-TF-VuJ" firstAttribute="height" secondItem="Yw3-gt-0j8" secondAttribute="height" multiplier="0.1" id="S5a-lt-OKo"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yw3-gt-0j8" firstAttribute="height" secondItem="4fM-es-7e6" secondAttribute="height" id="bTo-Lb-46a"/>
+                            <constraint firstItem="fef-bJ-26d" firstAttribute="height" secondItem="4fM-es-7e6" secondAttribute="height" id="e0y-tu-i6Z"/>
+                            <constraint firstItem="fef-bJ-26d" firstAttribute="width" secondItem="4fM-es-7e6" secondAttribute="width" id="fvV-s0-dLs"/>
+                            <constraint firstItem="Yw3-gt-0j8" firstAttribute="width" secondItem="4fM-es-7e6" secondAttribute="width" id="oQW-nz-Tcb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="ガチャ" image="gacha" selectedImage="gacha" id="dcU-v2-6AN"/>
                     <connections>
@@ -123,42 +170,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Swo-ae-l8U">
-                                <rect key="frame" x="0.0" y="20" width="320" height="320"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-99-UK0">
-                                <rect key="frame" x="16" y="350" width="144" height="41"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="42"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOR-cD-Z1N">
-                                <rect key="frame" x="190" y="348" width="123" height="51"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Po." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="had-Vl-MUx">
-                                <rect key="frame" x="168" y="358" width="69" height="38"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-lK-QmY">
-                                <rect key="frame" x="65" y="412" width="191" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="29"/>
-                                <state key="normal" title="前画面に戻る"/>
-                                <connections>
-                                    <action selector="back" destination="Yqh-DD-Vos" eventType="touchUpInside" id="gpY-qS-x8K"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5YM-Th-Fgf" userLabel="Stack View1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="480"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7a-8t-jPa" userLabel="Stack View2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Swo-ae-l8U">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-99-UK0">
+                                        <rect key="frame" x="0.0" y="320" width="320" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOR-cD-Z1N">
+                                        <rect key="frame" x="0.0" y="366.5" width="320" height="45.5"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="41"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Po." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="had-Vl-MUx">
+                                        <rect key="frame" x="0.0" y="412" width="320" height="40"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="36"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-lK-QmY">
+                                        <rect key="frame" x="0.0" y="452" width="320" height="28"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="29"/>
+                                        <state key="normal" title="前画面に戻る"/>
+                                        <connections>
+                                            <action selector="back" destination="Yqh-DD-Vos" eventType="touchUpInside" id="gpY-qS-x8K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="m7a-8t-jPa" firstAttribute="height" secondItem="5YM-Th-Fgf" secondAttribute="height" multiplier="0.666666" id="RBf-24-ANv"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5YM-Th-Fgf" firstAttribute="height" secondItem="3Bu-zt-yKi" secondAttribute="height" id="3Rk-H1-03h"/>
+                            <constraint firstItem="5YM-Th-Fgf" firstAttribute="leading" secondItem="3Bu-zt-yKi" secondAttribute="leading" id="4EU-HY-bfg"/>
+                            <constraint firstItem="5YM-Th-Fgf" firstAttribute="top" secondItem="aJo-QM-Q4w" secondAttribute="bottom" id="6uF-pX-vqo"/>
+                            <constraint firstAttribute="trailing" secondItem="5YM-Th-Fgf" secondAttribute="trailing" id="SwB-j1-ys4"/>
+                            <constraint firstAttribute="bottom" secondItem="5YM-Th-Fgf" secondAttribute="bottom" id="oDw-h9-VRe"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="attack" destination="ZOR-cD-Z1N" id="ByL-yq-Hui"/>
@@ -182,36 +244,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-W9-Nyd">
-                                <rect key="frame" x="41" y="258" width="239" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sliderChanged1:" destination="fQd-3f-2py" eventType="valueChanged" id="aFW-cq-XkD"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BGM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srA-qW-YBd">
-                                <rect key="frame" x="104" y="60" width="112" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GK-6d-3eH">
-                                <rect key="frame" x="104" y="193" width="112" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pbb-Pp-Qks">
-                                <rect key="frame" x="41" y="131" width="239" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="sliderChanged:" destination="fQd-3f-2py" eventType="valueChanged" id="0i0-bm-SMF"/>
-                                </connections>
-                            </slider>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S2Y-fe-PeU" userLabel="Stack View1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyn-MP-L80" userLabel="ViewTop">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BGM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srA-qW-YBd">
+                                        <rect key="frame" x="0.0" y="69" width="320" height="46"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6x-Nu-H1y" userLabel="Stack View2">
+                                        <rect key="frame" x="0.0" y="115" width="320" height="69"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsI-o0-Ebc" userLabel="View1">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="69"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pbb-Pp-Qks">
+                                                <rect key="frame" x="30" y="0.0" width="260" height="70"/>
+                                                <connections>
+                                                    <action selector="sliderChanged:" destination="fQd-3f-2py" eventType="valueChanged" id="0i0-bm-SMF"/>
+                                                </connections>
+                                            </slider>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A5b-3m-YHf" userLabel="View2">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="69"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Pbb-Pp-Qks" firstAttribute="leading" secondItem="rsI-o0-Ebc" secondAttribute="trailing" id="4J7-h2-4xT"/>
+                                            <constraint firstItem="A5b-3m-YHf" firstAttribute="width" secondItem="m6x-Nu-H1y" secondAttribute="width" multiplier="0.1" id="4Lx-nr-icX"/>
+                                            <constraint firstItem="rsI-o0-Ebc" firstAttribute="width" secondItem="m6x-Nu-H1y" secondAttribute="width" multiplier="0.1" id="LBP-HT-CX4"/>
+                                            <constraint firstItem="A5b-3m-YHf" firstAttribute="leading" secondItem="Pbb-Pp-Qks" secondAttribute="trailing" id="pRP-ZP-Dff"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GK-6d-3eH">
+                                        <rect key="frame" x="0.0" y="184" width="320" height="46"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIC-ZB-I4E" userLabel="Stack View3">
+                                        <rect key="frame" x="0.0" y="230" width="320" height="46"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zv-6O-iHa" userLabel="View3">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="46"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-W9-Nyd">
+                                                <rect key="frame" x="30" y="0.0" width="260" height="47"/>
+                                                <connections>
+                                                    <action selector="sliderChanged1:" destination="fQd-3f-2py" eventType="valueChanged" id="aFW-cq-XkD"/>
+                                                </connections>
+                                            </slider>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WS0-bN-fD2" userLabel="View4">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="46"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WS0-bN-fD2" firstAttribute="width" secondItem="UIC-ZB-I4E" secondAttribute="width" multiplier="0.1" id="dA1-AU-xxg"/>
+                                            <constraint firstItem="7Zv-6O-iHa" firstAttribute="width" secondItem="UIC-ZB-I4E" secondAttribute="width" multiplier="0.1" id="tzW-cI-HaA"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlY-b7-wEr" userLabel="ViewUnder">
+                                        <rect key="frame" x="0.0" y="276" width="320" height="184"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UIC-ZB-I4E" firstAttribute="height" secondItem="S2Y-fe-PeU" secondAttribute="height" multiplier="0.1" id="2wU-YJ-kPe"/>
+                                    <constraint firstItem="srA-qW-YBd" firstAttribute="height" secondItem="S2Y-fe-PeU" secondAttribute="height" multiplier="0.1" id="36s-gr-XXw"/>
+                                    <constraint firstItem="iyn-MP-L80" firstAttribute="height" secondItem="S2Y-fe-PeU" secondAttribute="height" multiplier="0.15" id="MVV-fV-p4V"/>
+                                    <constraint firstItem="3GK-6d-3eH" firstAttribute="height" secondItem="S2Y-fe-PeU" secondAttribute="height" multiplier="0.1" id="PGI-ah-sv6"/>
+                                    <constraint firstItem="m6x-Nu-H1y" firstAttribute="top" secondItem="srA-qW-YBd" secondAttribute="bottom" id="QQn-1f-CLR"/>
+                                    <constraint firstItem="m6x-Nu-H1y" firstAttribute="leading" secondItem="S2Y-fe-PeU" secondAttribute="leading" id="dNR-U0-kck"/>
+                                    <constraint firstAttribute="trailing" secondItem="m6x-Nu-H1y" secondAttribute="trailing" id="ds1-XB-MyX"/>
+                                    <constraint firstItem="qlY-b7-wEr" firstAttribute="height" secondItem="S2Y-fe-PeU" secondAttribute="height" multiplier="0.4" id="tM9-Eh-naA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S2Y-fe-PeU" secondAttribute="trailing" id="5FD-15-Xjy"/>
+                            <constraint firstAttribute="bottom" secondItem="S2Y-fe-PeU" secondAttribute="bottom" id="9An-BB-lEV"/>
+                            <constraint firstItem="S2Y-fe-PeU" firstAttribute="leading" secondItem="DfS-14-2wK" secondAttribute="leading" id="ikn-J2-8qi"/>
+                            <constraint firstItem="S2Y-fe-PeU" firstAttribute="top" secondItem="Fhr-Ad-1rg" secondAttribute="bottom" id="mOi-mT-Ptl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="その他" image="Image-1" selectedImage="Image-1" id="ZfX-gU-p9U"/>
                     <connections>
@@ -598,15 +721,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AV-q2-o8d">
-                                <rect key="frame" x="75" y="113" width="195" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="279"/>
-                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ATD-Lm-E3O">
+                                <rect key="frame" x="0.0" y="20" width="320" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQq-0A-0Md" userLabel="View1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AV-q2-o8d">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="279"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQ3-j9-T8D" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="480" width="320" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="QQ3-j9-T8D" firstAttribute="height" secondItem="ATD-Lm-E3O" secondAttribute="height" multiplier="0.2" id="9AT-oV-WvH"/>
+                                    <constraint firstItem="FQq-0A-0Md" firstAttribute="height" secondItem="ATD-Lm-E3O" secondAttribute="height" multiplier="0.2" id="ZiA-FZ-6qP"/>
+                                    <constraint firstItem="9AV-q2-o8d" firstAttribute="height" secondItem="ATD-Lm-E3O" secondAttribute="height" id="tlm-ep-bj9"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ATD-Lm-E3O" firstAttribute="leading" secondItem="JDe-4D-3fR" secondAttribute="leading" id="gYF-EB-lvD"/>
+                            <constraint firstItem="ATD-Lm-E3O" firstAttribute="height" secondItem="JDe-4D-3fR" secondAttribute="height" id="jG7-3x-PU5"/>
+                            <constraint firstAttribute="trailing" secondItem="ATD-Lm-E3O" secondAttribute="trailing" id="kPx-cd-GhR"/>
+                            <constraint firstAttribute="bottom" secondItem="ATD-Lm-E3O" secondAttribute="bottom" id="mDM-Mj-n3s"/>
+                            <constraint firstItem="ATD-Lm-E3O" firstAttribute="top" secondItem="o3d-FM-1Tc" secondAttribute="bottom" id="wEy-rJ-4Yi"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="9AV-q2-o8d" id="9k5-Tn-D00"/>
