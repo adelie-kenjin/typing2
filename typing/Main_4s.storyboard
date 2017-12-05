@@ -181,26 +181,42 @@
                                             </imageView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-99-UK0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-99-UK0">
                                         <rect key="frame" x="0.0" y="320" width="320" height="46.5"/>
                                         <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOR-cD-Z1N">
-                                        <rect key="frame" x="0.0" y="366.5" width="320" height="45.5"/>
-                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="41"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Po." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="had-Vl-MUx">
-                                        <rect key="frame" x="0.0" y="412" width="320" height="40"/>
-                                        <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="36"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-lK-QmY">
-                                        <rect key="frame" x="0.0" y="452" width="320" height="28"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Uo-pM-jSR">
+                                        <rect key="frame" x="0.0" y="366.5" width="320" height="38.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-Qh-65R" userLabel="View2">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="38.5"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Po." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="had-Vl-MUx">
+                                                <rect key="frame" x="64" y="0.0" width="64" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="36"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOR-cD-Z1N">
+                                                <rect key="frame" x="128" y="0.0" width="160" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="41"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Yn-Nb-2kz" userLabel="View3">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="38.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lbr-Qh-65R" firstAttribute="width" secondItem="1Uo-pM-jSR" secondAttribute="width" multiplier="0.2" id="6nA-OT-Gjb"/>
+                                            <constraint firstItem="6Yn-Nb-2kz" firstAttribute="width" secondItem="1Uo-pM-jSR" secondAttribute="width" multiplier="0.1" id="9A7-J2-HzV"/>
+                                            <constraint firstItem="had-Vl-MUx" firstAttribute="width" secondItem="1Uo-pM-jSR" secondAttribute="width" multiplier="0.2" id="hrD-qK-Nir"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVc-lK-QmY">
+                                        <rect key="frame" x="0.0" y="405" width="320" height="75"/>
                                         <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="29"/>
                                         <state key="normal" title="前画面に戻る"/>
                                         <connections>
@@ -209,6 +225,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="1Uo-pM-jSR" firstAttribute="height" secondItem="5YM-Th-Fgf" secondAttribute="height" multiplier="0.08" id="JbV-QK-etm"/>
                                     <constraint firstItem="m7a-8t-jPa" firstAttribute="height" secondItem="5YM-Th-Fgf" secondAttribute="height" multiplier="0.666666" id="RBf-24-ANv"/>
                                 </constraints>
                             </stackView>
@@ -359,64 +376,154 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="森の道 昼.png" translatesAutoresizingMaskIntoConstraints="NO" id="mzR-ev-Vpc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="501"/>
+                                <rect key="frame" x="-398" y="-60" width="1115" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wr-Uw-3IY">
-                                <rect key="frame" x="33" y="302" width="119" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="14"/>
-                                <state key="normal" title="アップグレード">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="button" destination="O5J-Ax-HTx" eventType="touchUpInside" id="7JZ-KD-z23"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s0-ct-JOV">
-                                <rect key="frame" x="90" y="230" width="53" height="37"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="41"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lv." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpF-rg-e6r">
-                                <rect key="frame" x="39" y="230" width="57" height="37"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWt-mZ-FTN">
-                                <rect key="frame" x="169" y="302" width="120" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="14"/>
-                                <state key="normal" title="キャラクター">
-                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="lhf-yN-yoh" kind="modal" modalTransitionStyle="crossDissolve" id="NPx-pj-rit"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="コインが足りません.png" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-LB-Y7m">
-                                <rect key="frame" x="173" y="228" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5d-mn-cFZ">
-                                <rect key="frame" x="44" y="28" width="233" height="161"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="コイン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maM-6j-O9A">
-                                <rect key="frame" x="215" y="230" width="77" height="36"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KJ5-mR-ui3">
+                                <rect key="frame" x="0.0" y="20" width="320" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vd1-JM-Mcw" userLabel="View1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="7"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFS-Vi-yUW" userLabel="Stack View2">
+                                        <rect key="frame" x="0.0" y="7" width="320" height="144"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gi8-SC-b2G" userLabel="View11">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="144"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e5d-mn-cFZ">
+                                                <rect key="frame" x="80" y="0.0" width="160" height="144"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6UL-0X-ZPf" userLabel="View12">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="144"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6UL-0X-ZPf" firstAttribute="leading" secondItem="e5d-mn-cFZ" secondAttribute="trailing" id="V4R-t3-geM"/>
+                                            <constraint firstItem="e5d-mn-cFZ" firstAttribute="leading" secondItem="gi8-SC-b2G" secondAttribute="trailing" id="Xsd-KK-9hJ"/>
+                                            <constraint firstItem="gi8-SC-b2G" firstAttribute="width" secondItem="hFS-Vi-yUW" secondAttribute="width" multiplier="0.25" id="cbE-DV-FJF"/>
+                                            <constraint firstItem="6UL-0X-ZPf" firstAttribute="width" secondItem="hFS-Vi-yUW" secondAttribute="width" multiplier="0.25" id="rFr-9t-pC1"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sGE-hc-4VC" userLabel="View9">
+                                        <rect key="frame" x="0.0" y="151" width="320" height="24"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QvF-4Q-i9z" userLabel="Stack View3">
+                                        <rect key="frame" x="0.0" y="175" width="320" height="48"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-CA-vLi" userLabel="View2">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lv." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpF-rg-e6r">
+                                                <rect key="frame" x="48" y="0.0" width="47" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s0-ct-JOV">
+                                                <rect key="frame" x="95" y="0.0" width="23" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="41"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gt-dS-i4g" userLabel="View3">
+                                                <rect key="frame" x="118" y="0.0" width="48" height="48"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="コインが足りません.png" translatesAutoresizingMaskIntoConstraints="NO" id="fW6-LB-Y7m">
+                                                <rect key="frame" x="166" y="0.0" width="48" height="48"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="コイン" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="maM-6j-O9A">
+                                                <rect key="frame" x="214" y="0.0" width="74" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nOG-da-Dlw" userLabel="View4">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="48"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="cYT-CA-vLi" firstAttribute="width" secondItem="QvF-4Q-i9z" secondAttribute="width" multiplier="0.15" id="Gmd-tP-8Br"/>
+                                            <constraint firstItem="fW6-LB-Y7m" firstAttribute="width" secondItem="QvF-4Q-i9z" secondAttribute="width" multiplier="0.15" id="j9y-Og-TFs"/>
+                                            <constraint firstItem="7gt-dS-i4g" firstAttribute="width" secondItem="QvF-4Q-i9z" secondAttribute="width" multiplier="0.15" id="lZ2-gh-XB9"/>
+                                            <constraint firstItem="nOG-da-Dlw" firstAttribute="width" secondItem="QvF-4Q-i9z" secondAttribute="width" multiplier="0.1" id="zg6-4s-v0v"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8x-8J-ts0" userLabel="View8">
+                                        <rect key="frame" x="0.0" y="223" width="320" height="24"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkm-lA-21c" userLabel="Stack View1">
+                                        <rect key="frame" x="0.0" y="247" width="320" height="113"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qb-wV-tGO" userLabel="View6">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="113"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wr-Uw-3IY">
+                                                <rect key="frame" x="32" y="0.0" width="112" height="113"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="14"/>
+                                                <state key="normal" title="アップグレード">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button" destination="O5J-Ax-HTx" eventType="touchUpInside" id="7JZ-KD-z23"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="25u-NC-xhU" userLabel="View10">
+                                                <rect key="frame" x="144" y="0.0" width="32" height="113"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWt-mZ-FTN">
+                                                <rect key="frame" x="176" y="0.0" width="112" height="113"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="14"/>
+                                                <state key="normal" title="キャラクター">
+                                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="lhf-yN-yoh" kind="modal" modalTransitionStyle="crossDissolve" id="NPx-pj-rit"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whv-9P-z5l" userLabel="View7">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="113"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FWt-mZ-FTN" firstAttribute="leading" secondItem="25u-NC-xhU" secondAttribute="trailing" id="Gli-VD-fva"/>
+                                            <constraint firstAttribute="bottom" secondItem="FWt-mZ-FTN" secondAttribute="bottom" id="MKa-T7-ubm"/>
+                                            <constraint firstItem="FWt-mZ-FTN" firstAttribute="top" secondItem="fkm-lA-21c" secondAttribute="top" id="Tad-Or-iuH"/>
+                                            <constraint firstItem="Whv-9P-z5l" firstAttribute="leading" secondItem="FWt-mZ-FTN" secondAttribute="trailing" id="Y1o-AM-qHS"/>
+                                            <constraint firstItem="Whv-9P-z5l" firstAttribute="width" secondItem="fkm-lA-21c" secondAttribute="width" multiplier="0.1" id="bOk-DY-YVJ"/>
+                                            <constraint firstItem="5wr-Uw-3IY" firstAttribute="width" secondItem="fkm-lA-21c" secondAttribute="width" multiplier="0.35" id="btM-7N-bAj"/>
+                                            <constraint firstItem="0Qb-wV-tGO" firstAttribute="width" secondItem="fkm-lA-21c" secondAttribute="width" multiplier="0.1" id="dnt-la-jqf"/>
+                                            <constraint firstItem="25u-NC-xhU" firstAttribute="width" secondItem="fkm-lA-21c" secondAttribute="width" multiplier="0.1" id="j4N-qE-hHw"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ias-Kl-cZK" userLabel="View5">
+                                        <rect key="frame" x="0.0" y="360" width="320" height="120"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fkm-lA-21c" firstAttribute="leading" secondItem="KJ5-mR-ui3" secondAttribute="leading" id="25v-CN-wGY"/>
+                                    <constraint firstItem="M8x-8J-ts0" firstAttribute="height" secondItem="KJ5-mR-ui3" secondAttribute="height" multiplier="0.05" id="2he-xm-rkI"/>
+                                    <constraint firstItem="hFS-Vi-yUW" firstAttribute="height" secondItem="KJ5-mR-ui3" secondAttribute="height" multiplier="0.3" id="8EL-Ur-oYq"/>
+                                    <constraint firstAttribute="trailing" secondItem="fkm-lA-21c" secondAttribute="trailing" id="92d-lo-Obz"/>
+                                    <constraint firstItem="ias-Kl-cZK" firstAttribute="top" secondItem="fkm-lA-21c" secondAttribute="bottom" id="PC5-Rx-Dgh"/>
+                                    <constraint firstItem="fkm-lA-21c" firstAttribute="top" secondItem="M8x-8J-ts0" secondAttribute="bottom" id="dEs-Sq-GSH"/>
+                                    <constraint firstItem="QvF-4Q-i9z" firstAttribute="height" secondItem="KJ5-mR-ui3" secondAttribute="height" multiplier="0.1" id="efb-VT-lvO"/>
+                                    <constraint firstItem="sGE-hc-4VC" firstAttribute="height" secondItem="KJ5-mR-ui3" secondAttribute="height" multiplier="0.05" id="gDX-dU-xMB"/>
+                                    <constraint firstItem="ias-Kl-cZK" firstAttribute="height" secondItem="KJ5-mR-ui3" secondAttribute="height" multiplier="0.25" id="uzN-5R-mWU"/>
+                                    <constraint firstItem="Vd1-JM-Mcw" firstAttribute="height" secondItem="KJ5-mR-ui3" secondAttribute="height" multiplier="0.015" id="xO0-s5-bAd"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="KJ5-mR-ui3" secondAttribute="trailing" id="3hV-Sb-0oI"/>
+                            <constraint firstItem="KJ5-mR-ui3" firstAttribute="leading" secondItem="fmc-1e-cIa" secondAttribute="leading" id="Imh-K7-qaw"/>
+                            <constraint firstAttribute="bottom" secondItem="KJ5-mR-ui3" secondAttribute="bottom" id="MUt-dL-8cN"/>
+                            <constraint firstItem="KJ5-mR-ui3" firstAttribute="top" secondItem="L3h-G4-8Eh" secondAttribute="bottom" id="Rcs-Oh-OeV"/>
+                            <constraint firstItem="KJ5-mR-ui3" firstAttribute="height" secondItem="fmc-1e-cIa" secondAttribute="height" id="XcM-Hc-AoM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="アタック" image="Image" selectedImage="Image" id="Iu7-Uh-57S"/>
                     <connections>
@@ -441,51 +548,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_8232.png" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-fN-1Yq">
-                                <rect key="frame" x="0.0" y="-60" width="318" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_8232.png" translatesAutoresizingMaskIntoConstraints="NO" id="mA2-fN-1Yq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-zF-26g">
-                                <rect key="frame" x="63" y="367" width="94" height="67"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="30"/>
-                                <state key="normal" title="戻る"/>
-                                <connections>
-                                    <action selector="back" destination="lhf-yN-yoh" eventType="touchUpInside" id="Ec2-Ft-1Ig"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-cU-8kp">
-                                <rect key="frame" x="34" y="281" width="129" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pt." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-Cc-xhm">
-                                <rect key="frame" x="165" y="291" width="74" height="40"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE6-sQ-AwD">
-                                <rect key="frame" x="188" y="268" width="107" height="63"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cA-P8-IlP">
-                                <rect key="frame" x="172" y="367" width="94" height="68"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="30"/>
-                                <state key="normal" title="選択"/>
-                                <connections>
-                                    <action selector="a" destination="lhf-yN-yoh" eventType="touchUpInside" id="IfX-ia-iKj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EQA-P8-fTQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKn-Wh-kdb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="312"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXk-ti-L6i" userLabel="Stack View1">
+                                        <rect key="frame" x="0.0" y="312" width="320" height="48"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDd-ld-SGb" userLabel="View1">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="48"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y2-cU-8kp">
+                                                <rect key="frame" x="32" y="0.0" width="142.5" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="32"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5E-40-BFl" userLabel="View2">
+                                                <rect key="frame" x="174.5" y="0.0" width="32" height="48"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pt." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-Cc-xhm">
+                                                <rect key="frame" x="206.5" y="0.0" width="42.5" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="34"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE6-sQ-AwD">
+                                                <rect key="frame" x="249" y="0.0" width="39" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="50"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRY-td-h4f" userLabel="View3">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="48"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wRY-td-h4f" firstAttribute="width" secondItem="cXk-ti-L6i" secondAttribute="width" multiplier="0.1" id="5Jn-q9-VEn"/>
+                                            <constraint firstItem="YDd-ld-SGb" firstAttribute="width" secondItem="cXk-ti-L6i" secondAttribute="width" multiplier="0.1" id="Hhb-du-zaK"/>
+                                            <constraint firstItem="G5E-40-BFl" firstAttribute="width" secondItem="cXk-ti-L6i" secondAttribute="width" multiplier="0.1" id="pAG-8d-IxQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgX-3I-HVm">
+                                        <rect key="frame" x="0.0" y="360" width="320" height="24"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4NU-MQ-yk4" userLabel="Stack View2">
+                                        <rect key="frame" x="0.0" y="384" width="320" height="48"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YT9-0H-vIW" userLabel="View1">
+                                                <rect key="frame" x="0.0" y="0.0" width="70.5" height="48"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-zF-26g">
+                                                <rect key="frame" x="70.5" y="0.0" width="79" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="30"/>
+                                                <state key="normal" title="戻る"/>
+                                                <connections>
+                                                    <action selector="back" destination="lhf-yN-yoh" eventType="touchUpInside" id="Ec2-Ft-1Ig"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8oK-3J-dhv" userLabel="View2">
+                                                <rect key="frame" x="149.5" y="0.0" width="46.5" height="48"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cA-P8-IlP">
+                                                <rect key="frame" x="196" y="0.0" width="60" height="48"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="30"/>
+                                                <state key="normal" title="選択"/>
+                                                <connections>
+                                                    <action selector="a" destination="lhf-yN-yoh" eventType="touchUpInside" id="IfX-ia-iKj"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N58-h8-0wu" userLabel="View3">
+                                                <rect key="frame" x="256" y="0.0" width="64" height="48"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="YT9-0H-vIW" firstAttribute="width" secondItem="4NU-MQ-yk4" secondAttribute="width" multiplier="0.22" id="GpC-19-umq"/>
+                                            <constraint firstItem="8oK-3J-dhv" firstAttribute="width" secondItem="4NU-MQ-yk4" secondAttribute="width" multiplier="0.145" id="cL8-Y9-dv4"/>
+                                            <constraint firstItem="N58-h8-0wu" firstAttribute="width" secondItem="4NU-MQ-yk4" secondAttribute="width" multiplier="0.2" id="lzb-fW-XZx"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bW9-kY-R6i" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="432" width="320" height="48"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bW9-kY-R6i" firstAttribute="height" secondItem="EQA-P8-fTQ" secondAttribute="height" multiplier="0.1" id="Y5Q-2g-XEv"/>
+                                    <constraint firstItem="dgX-3I-HVm" firstAttribute="top" secondItem="cXk-ti-L6i" secondAttribute="bottom" id="am7-mb-DSz"/>
+                                    <constraint firstItem="cXk-ti-L6i" firstAttribute="height" secondItem="EQA-P8-fTQ" secondAttribute="height" multiplier="0.1" id="byh-6j-7aP"/>
+                                    <constraint firstItem="zKn-Wh-kdb" firstAttribute="height" secondItem="EQA-P8-fTQ" secondAttribute="height" multiplier="0.65" id="gtB-bW-TEm"/>
+                                    <constraint firstItem="4NU-MQ-yk4" firstAttribute="height" secondItem="EQA-P8-fTQ" secondAttribute="height" multiplier="0.1" id="kg5-4U-odW"/>
+                                    <constraint firstItem="4NU-MQ-yk4" firstAttribute="top" secondItem="dgX-3I-HVm" secondAttribute="bottom" id="ubw-AG-3Wi"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l3D-aL-Xwc" firstAttribute="top" secondItem="EQA-P8-fTQ" secondAttribute="bottom" id="7fl-Y7-SUj"/>
+                            <constraint firstAttribute="trailing" secondItem="mA2-fN-1Yq" secondAttribute="trailing" id="CKT-MW-BPU"/>
+                            <constraint firstItem="EQA-P8-fTQ" firstAttribute="leading" secondItem="ftZ-Ox-qCd" secondAttribute="leading" id="KgC-Jg-CCR"/>
+                            <constraint firstAttribute="trailing" secondItem="EQA-P8-fTQ" secondAttribute="trailing" id="ZCB-1Q-vpR"/>
+                            <constraint firstItem="mA2-fN-1Yq" firstAttribute="leading" secondItem="ftZ-Ox-qCd" secondAttribute="leading" id="b4R-Hc-MTZ"/>
+                            <constraint firstItem="mA2-fN-1Yq" firstAttribute="top" secondItem="ftZ-Ox-qCd" secondAttribute="top" id="ejt-dl-f8J"/>
+                            <constraint firstItem="EQA-P8-fTQ" firstAttribute="top" secondItem="ftZ-Ox-qCd" secondAttribute="top" id="fcC-lq-OAv"/>
+                            <constraint firstAttribute="bottom" secondItem="mA2-fN-1Yq" secondAttribute="bottom" id="w65-mn-Dc9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NRz-2r-dUQ"/>
                     <connections>
@@ -515,62 +686,169 @@
                                 <rect key="frame" x="0.0" y="0.0" width="254" height="480"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWH-ZS-0xI">
-                                <rect key="frame" x="60" y="251" width="200" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
-                                <state key="normal" title="ダンジョン1">
-                                    <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.59323317310000001" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="button1" destination="u2h-7T-Q6R" eventType="touchUpInside" id="qXO-xc-BhO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAg-Lw-4kG">
-                                <rect key="frame" x="60" y="368" width="200" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
-                                <state key="normal" title="ダンジョン3">
-                                    <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.59323317310000001" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="button3" destination="u2h-7T-Q6R" eventType="touchUpInside" id="CL2-xF-nNb"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcV-0K-zRq">
-                                <rect key="frame" x="137" y="14" width="84" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW6-ld-zb5">
-                                <rect key="frame" x="60" y="308" width="200" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
-                                <state key="normal" title="ダンジョン2">
-                                    <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.59323317310000001" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="button2" destination="u2h-7T-Q6R" eventType="touchUpInside" id="dZ6-63-0j8"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lv." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4n-sZ-krQ">
-                                <rect key="frame" x="113" y="15" width="71" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcs-Al-Ei2">
-                                <rect key="frame" x="40" y="78" width="240" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-oO-C4f">
+                                <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lJ-ZE-fXm" userLabel="View1">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="11.5"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6c-rj-rSR">
+                                        <rect key="frame" x="0.0" y="11.5" width="320" height="46"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exh-OC-qCT" userLabel="View9">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="46"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lv." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4n-sZ-krQ">
+                                                <rect key="frame" x="112" y="0.0" width="59" height="46"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcV-0K-zRq" userLabel="Label">
+                                                <rect key="frame" x="171" y="0.0" width="21" height="46"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="37"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48b-yN-mv4" userLabel="View10">
+                                                <rect key="frame" x="192" y="0.0" width="128" height="46"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Exh-OC-qCT" firstAttribute="width" secondItem="T6c-rj-rSR" secondAttribute="width" multiplier="0.35" id="ZDR-1Z-1aG"/>
+                                            <constraint firstItem="48b-yN-mv4" firstAttribute="width" secondItem="T6c-rj-rSR" secondAttribute="width" multiplier="0.4" id="kZd-S8-Rmn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofx-ac-Uu2" userLabel="Stack View4">
+                                        <rect key="frame" x="0.0" y="57.5" width="320" height="138"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjs-Ld-7T9" userLabel="View7">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="138"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bcs-Al-Ei2">
+                                                <rect key="frame" x="80" y="0.0" width="160" height="138"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLK-ZE-58E" userLabel="View8">
+                                                <rect key="frame" x="240" y="0.0" width="80" height="138"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wjs-Ld-7T9" firstAttribute="width" secondItem="ofx-ac-Uu2" secondAttribute="width" multiplier="0.25" id="ceK-Bo-vtR"/>
+                                            <constraint firstItem="PLK-ZE-58E" firstAttribute="width" secondItem="ofx-ac-Uu2" secondAttribute="width" multiplier="0.25" id="qRn-xl-mQL"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VK4-5V-uyn" userLabel="View5">
+                                        <rect key="frame" x="0.0" y="195.5" width="320" height="9"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owP-BK-hC3" userLabel="Stack View1">
+                                        <rect key="frame" x="0.0" y="204.5" width="320" height="57.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6e-BY-DLA" userLabel="View11">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="57.5"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWH-ZS-0xI">
+                                                <rect key="frame" x="32" y="0.0" width="256" height="57.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
+                                                <state key="normal" title="ダンジョン1">
+                                                    <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.59323317310000001" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button1" destination="u2h-7T-Q6R" eventType="touchUpInside" id="qXO-xc-BhO"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AlU-VZ-ube" userLabel="View12">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="57.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="C6e-BY-DLA" firstAttribute="width" secondItem="owP-BK-hC3" secondAttribute="width" multiplier="0.1" id="3Et-WV-ecl"/>
+                                            <constraint firstItem="AlU-VZ-ube" firstAttribute="width" secondItem="owP-BK-hC3" secondAttribute="width" multiplier="0.1" id="z4l-f8-HBk"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0c-Ze-dXw" userLabel="View2">
+                                        <rect key="frame" x="0.0" y="262" width="320" height="11.5"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cj2-Tm-uM5" userLabel="Stack View2">
+                                        <rect key="frame" x="0.0" y="273.5" width="320" height="57.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gn-a5-pjJ" userLabel="View13">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="57.5"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW6-ld-zb5">
+                                                <rect key="frame" x="32" y="0.0" width="256" height="57.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
+                                                <state key="normal" title="ダンジョン2">
+                                                    <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.59323317310000001" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button2" destination="u2h-7T-Q6R" eventType="touchUpInside" id="dZ6-63-0j8"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM2-Nq-NZJ" userLabel="View14">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="57.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hM2-Nq-NZJ" firstAttribute="width" secondItem="Cj2-Tm-uM5" secondAttribute="width" multiplier="0.1" id="1P8-0k-Qme"/>
+                                            <constraint firstItem="2Gn-a5-pjJ" firstAttribute="width" secondItem="Cj2-Tm-uM5" secondAttribute="width" multiplier="0.1" id="LaU-R8-fDV"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-n3-t58" userLabel="View3">
+                                        <rect key="frame" x="0.0" y="331" width="320" height="11.5"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbM-Hz-wfP" userLabel="Stack View3">
+                                        <rect key="frame" x="0.0" y="342.5" width="320" height="57.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JY5-rb-oKQ" userLabel="View15">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="57.5"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZAg-Lw-4kG">
+                                                <rect key="frame" x="32" y="0.0" width="256" height="57.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="22"/>
+                                                <state key="normal" title="ダンジョン3">
+                                                    <color key="titleColor" red="0.50196081400000003" green="1" blue="0.0" alpha="0.59323317310000001" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="button3" destination="u2h-7T-Q6R" eventType="touchUpInside" id="CL2-xF-nNb"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5A-K5-bOa" userLabel="View16">
+                                                <rect key="frame" x="288" y="0.0" width="32" height="57.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="S5A-K5-bOa" firstAttribute="width" secondItem="gbM-Hz-wfP" secondAttribute="width" multiplier="0.1" id="SvH-2h-iGZ"/>
+                                            <constraint firstItem="JY5-rb-oKQ" firstAttribute="width" secondItem="gbM-Hz-wfP" secondAttribute="width" multiplier="0.1" id="TCD-Y0-Tcp"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D91-Vr-Utj" userLabel="View4">
+                                        <rect key="frame" x="0.0" y="400" width="320" height="60"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oaP-n3-t58" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.025" id="8Lt-Ky-X8n"/>
+                                    <constraint firstItem="owP-BK-hC3" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.125" id="AYP-3R-hbW"/>
+                                    <constraint firstItem="w0c-Ze-dXw" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.025" id="BH4-2W-KIU"/>
+                                    <constraint firstItem="T6c-rj-rSR" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.1" id="Rtj-7W-19c"/>
+                                    <constraint firstItem="VK4-5V-uyn" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.02" id="TJ9-p0-Pbv"/>
+                                    <constraint firstItem="5lJ-ZE-fXm" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.025" id="jcq-U4-ZmB"/>
+                                    <constraint firstItem="Cj2-Tm-uM5" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.125" id="kn9-Wc-qqR"/>
+                                    <constraint firstAttribute="bottom" secondItem="D91-Vr-Utj" secondAttribute="bottom" id="ksE-E5-1nG"/>
+                                    <constraint firstItem="gbM-Hz-wfP" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.125" id="tyV-Av-Leo"/>
+                                    <constraint firstItem="ofx-ac-Uu2" firstAttribute="height" secondItem="LO2-oO-C4f" secondAttribute="height" multiplier="0.3" id="zCI-bs-7yA"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LO2-oO-C4f" secondAttribute="bottom" id="MDh-qu-BqB"/>
+                            <constraint firstItem="LO2-oO-C4f" firstAttribute="leading" secondItem="3dy-Tm-E9x" secondAttribute="leading" id="SoE-l5-A6N"/>
+                            <constraint firstItem="LO2-oO-C4f" firstAttribute="top" secondItem="WXI-aO-4Ce" secondAttribute="bottom" id="hSW-2H-I3d"/>
+                            <constraint firstAttribute="trailing" secondItem="LO2-oO-C4f" secondAttribute="trailing" id="lXr-v5-NZp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="バトル" image="sword" selectedImage="sword" id="hmp-HJ-Vnv"/>
                     <connections>
@@ -725,17 +1003,17 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="480"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQq-0A-0Md" userLabel="View1">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AV-q2-o8d">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                        <rect key="frame" x="0.0" y="96" width="320" height="288"/>
                                         <fontDescription key="fontDescription" name="PixelMplus10-Regular" family="PixelMplus10" pointSize="279"/>
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQ3-j9-T8D" userLabel="View2">
-                                        <rect key="frame" x="0.0" y="480" width="320" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="384" width="320" height="96"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
