@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var volume: Float = 0.5
 
-    func grabStoryboard() -> UIStoryboard {
+    /*func grabStoryboard() -> UIStoryboard {
         var storyboard = UIStoryboard()
         let height = UIScreen.main.bounds.size.height
         let width = UIScreen.main.bounds.size.width
@@ -45,8 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         }
         return storyboard
-    }
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    }*/
+    /*func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         let storyboard: UIStoryboard = self.grabStoryboard()
@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window?.makeKeyAndVisible()
         return true
-    }
+    }*/
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
