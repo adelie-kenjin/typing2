@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var volume: Float = 0.5
 
-    /*func grabStoryboard() -> UIStoryboard {
+    func grabStoryboard() -> UIStoryboard {
         var storyboard = UIStoryboard()
         let height = UIScreen.main.bounds.size.height
         let width = UIScreen.main.bounds.size.width
@@ -23,8 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("縦の長さは", height)
         print("横の長さは", width)
 
+        storyboard = UIStoryboard(name: "Main", bundle: nil)
+        print("通常の画面が表示されます")
         
-        if height == 736 {
+       /* if height == 736 {
             storyboard = UIStoryboard(name: "Main_6plus", bundle: nil)
             print("6plusの画面が表示されます")
         } else if height == 480 {
@@ -43,9 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             storyboard = UIStoryboard(name: "Main", bundle: nil)
             print("通常の画面が表示されます")
 
-        }
+        }*/
         return storyboard
-    }*/
+ }
     /*func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         

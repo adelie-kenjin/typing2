@@ -405,7 +405,7 @@
 				TargetAttributes = {
 					84615C241E531CC100CEF3A5 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = KRD3HBM28P;
+						DevelopmentTeam = 39RQ88XXUQ;
 						ProvisioningStyle = Automatic;
 					};
 					84615C381E531CC100CEF3A5 = {
@@ -697,9 +697,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 39RQ88XXUQ;
 				INFOPLIST_FILE = typing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mm.typing564432;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -711,9 +711,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KRD3HBM28P;
+				DEVELOPMENT_TEAM = 39RQ88XXUQ;
 				INFOPLIST_FILE = typing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mm.typing564432;
 				PRODUCT_NAME = "$(TARGET_NAME)";
