@@ -111,7 +111,7 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        //textField.resignFirstResponder()
         return true
     }
     
