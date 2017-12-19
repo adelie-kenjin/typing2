@@ -113,6 +113,9 @@ class AttackViewController: UIViewController {
         self.present(nextView, animated: true, completion: nil)
         
     }
+    @IBAction func chara(_ sender: Any) {
+        performSegue(withIdentifier: "goCharaViewController", sender: nil)
+    }
     /*
      // MARK: - Navigation
      

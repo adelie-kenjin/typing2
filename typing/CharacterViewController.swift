@@ -53,7 +53,7 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
         getChara()
         
         
-        self.scrollView = UIScrollView(frame: self.view.bounds)
+        self.scrollView = UIScrollView(frame: CGRect(x:0, y:0, width:self.view.bounds.width, height:self.view.bounds.height*2/3))
         self.scrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(charaArray.count), height: self.view.bounds.height*2/3)
         self.scrollView.isPagingEnabled = true
         self.scrollView.showsHorizontalScrollIndicator = false
@@ -94,6 +94,7 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
         self.view.bringSubview(toFront: backButton)
         
         // Do any additional setup after loading the view.
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         if userDefaults.object(forKey: "GET") != nil {
@@ -158,7 +159,7 @@ class CharacterViewController: UIViewController ,UIScrollViewDelegate {
         print(charaArray)
     }
     @IBAction func back() {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
+     self.dismiss(animated: true, completion: nil)
         
     }
     

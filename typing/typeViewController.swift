@@ -5,7 +5,6 @@
 //  Created by Kenji Isobe on 2017/02/14.
 //  Copyright © 2017年 Kenji Isobe. All rights reserved.
 //
-
 import UIKit
 import AVFoundation
 
@@ -19,11 +18,11 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
     @IBOutlet var hpBar:UIProgressView!
     
     var typeArray: [String] = ["にくまん","ちゅうかまん","しゃしん","あんまん","ぴざまん","ごまあんまん","かれーまん","ぶたまん","さむらい","えんぴつ","おにぎり","こくばんけし","むだんけっせき","ひるやすみ","ふらんすぱん","けいたい","ぱそこん","あさごはん","すぷーん","かぞく","おやつ","くもり","たべのこし","たんさんすい","うでどけい","ふでたて","うんどうかい","あいふぉん","ふとん","ぬいぐるみ","すいとう"]
-      var img1:UIImage = UIImage(named:"リス.png")!
-      var img2:UIImage = UIImage(named:"怪獣.png")!
-      var img3:UIImage = UIImage(named:"犬鷲.png")!
-      var img4:UIImage = UIImage(named:"山賊.png")!
-      var img5:UIImage = UIImage(named:"野犬.png")!
+    var img1:UIImage = UIImage(named:"リス.png")!
+    var img2:UIImage = UIImage(named:"怪獣.png")!
+    var img3:UIImage = UIImage(named:"犬鷲.png")!
+    var img4:UIImage = UIImage(named:"山賊.png")!
+    var img5:UIImage = UIImage(named:"野犬.png")!
     var imageArray: [UIImage] = []
     
     var index: Int = 0
@@ -40,13 +39,13 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         util = Audio.shared
-
+        
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(
-        self,
-        selector:"stop",
-        name: NSNotification.Name.UIApplicationDidEnterBackground,
-        object: nil
+            self,
+            selector:"stop",
+            name: NSNotification.Name.UIApplicationDidEnterBackground,
+            object: nil
         )
         let notificationCenter1 = NotificationCenter.default
         notificationCenter1.addObserver(
@@ -55,14 +54,14 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
             name: NSNotification.Name.UIApplicationDidFinishLaunching,
             object: nil
         )
-
+        titleTextField.delegate = self
         self.titleTextField.becomeFirstResponder()
+        
         imageArray = [img1,img2,img3,img4,img5]
         let ret = Int(arc4random_uniform(5))
         image.image = imageArray[ret]
-
         hpBar.transform = CGAffineTransform(scaleX: 1.0,y: 4.0)
-        titleTextField.delegate = self
+        
         random = Int(arc4random_uniform(UInt32(typeArray.count)))
         typeLabel.text = typeArray[random]
         str = typeArray[random].characters.count
@@ -72,14 +71,14 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
         super.viewWillAppear(true)
         util.playBGM(fileName: "Chippy_2")
     }
-   
+    
     override func viewWillDisappear(_ animated: Bool) {
         timer.invalidate()
         util.stopBGM()
     }
     
     func stop(){
-       util.stopBGM()
+        util.stopBGM()
     }
     func restart(){
         util.playBGM(fileName: "Chippy_2")
@@ -89,10 +88,10 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
         if !timer.isValid {
             //タイマーが作動していない場合作動させる　!は否定の意味
             timer = Timer.scheduledTimer(timeInterval: 0.1,
-                target: self,
-                selector: #selector(self.up),
-                userInfo: nil,
-                repeats: true
+                                         target: self,
+                                         selector: #selector(self.up),
+                                         userInfo: nil,
+                                         repeats: true
             )
         }
         timer.fire()
@@ -110,15 +109,15 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
             self.performSegue(withIdentifier: "result", sender: nil)
         }
     }
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //textField.resignFirstResponder(
+        textField.resignFirstResponder()
         return true
     }
     
     //文字を判定する文字の数
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
+        
         let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
         let currentIndex = typeArray[random].index(typeArray[random].startIndex, offsetBy: str)
         let subStr = typeArray[random].substring(to:currentIndex)
@@ -160,4 +159,3 @@ class typeViewController: UIViewController ,UITextFieldDelegate,AVAudioPlayerDel
         }
     }
 }
-
